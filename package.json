@@ -7,6 +7,7 @@
         "build": "next build"
     },
     "dependencies": {
+        "@netlify/blobs": "^10.7.0",
         "@netlify/functions": "^5.1.2",
         "html2canvas": "^1.4.1",
         "jspdf": "^2.5.1",
