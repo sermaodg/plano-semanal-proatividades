@@ -92,16 +92,22 @@ export const handler: Handler = async (event) => {
     }
 
     const payload = safeParseJson(event.body) ?? {};
-    // Ajuste os nomes conforme seu front envia:
-    const serie = String(payload.serie ?? payload.turma ?? "").trim();
-    const idade = String(payload.idade ?? "").trim();
-    const tema = String(payload.tema ?? payload.temaAula ?? payload.assunto ?? "").trim();
-    const objetivos = String(payload.objetivos ?? "").trim();
-    const duracao = String(payload.duracao ?? payload.tempo ?? "").trim();
-    const recursos = String(payload.recursos ?? "").trim();
-    const bncc = String(payload.bncc ?? payload.habilidades ?? "").trim();
-    const observacoes = String(payload.observacoes ?? payload.obs ?? "").trim();
 
+    // Parse fields
+    const escola = String(payload.escola ?? payload.schoolName ?? "").trim();
+    const serie = String(payload.serie ?? payload.ano ?? "").trim();
+    const turma = String(payload.turma ?? "").trim();
+    const duracao = String(payload.duracao ?? "").trim();
+
+    const tema = String(payload.tema ?? payload.temaAula ?? "").trim();
+    const objetivoGeral = String(payload.objetivoGeral ?? "").trim();
+    const objetivosEspecificos = String(payload.objetivosEspecificos ?? "").trim();
+    const habilidadesBncc = String(payload.habilidadesBncc ?? "").trim();
+    const recursos = String(payload.recursos ?? "").trim();
+    const metodologia = String(payload.metodologia ?? "").trim();
+    const avaliacao = String(payload.avaliacao ?? "").trim();
+
+    // Check mandatory fields (basic check for backend, frontend will handle UI)
     if (!tema) {
         return json(400, { ok: false, error: "Campo obrigatório: tema (assunto da aula)." });
     }
@@ -110,40 +116,43 @@ export const handler: Handler = async (event) => {
 
     const system = `
 Você é um especialista em pedagogia e BNCC.
-Crie um plano de aula semanal (ou plano de aula completo) claro, prático e aplicável.
+Crie um plano de aula completo, claro, prático e aplicável.
 Escreva em português do Brasil, com linguagem objetiva para professoras.
-Estruture com: Título, Público/idade, Objetivos, Habilidades BNCC (se fornecidas), Materiais, Rotina (início/meio/fim), Atividades passo a passo, Avaliação, Adaptações (inclusão), e Sugestões extras.
-Se algum campo não for informado, faça suposições razoáveis e diga de forma natural.
+O formato deve ser profissional.
+Nome da Escola: ${escola || "Nome da Escola"}
 `.trim();
 
     const user = `
-Gere um plano/roteiro com base nestes dados (se faltarem, complete com bom senso):
+Gere um plano de aula com estes dados:
 
-- Série/Turma: ${serie || "(não informado)"}
-- Idade: ${idade || "(não informado)"}
-- Tema: ${tema}
-- Objetivos: ${objetivos || "(não informado)"}
-- Duração/Tempo: ${duracao || "(não informado)"}
-- Recursos/Materiais: ${recursos || "(não informado)"}
-- BNCC/Habilidades: ${bncc || "(não informado)"}
-- Observações: ${observacoes || "(não informado)"}
+- Escola: ${escola || "(não informado)"}
+- Ano/Série: ${serie || "(não informado)"}
+- Turma: ${turma || "(não informado)"}
+- Duração: ${duracao || "(não informado)"}
+- Tema da Aula: ${tema}
 
-Requisitos:
-- Seja bem prático e detalhado no passo a passo.
-- Use listas e subtítulos para ficar fácil de copiar e aplicar.
-- Evite enrolação.
+- Objetivo Geral: ${objetivoGeral || "(crie um adequado)"}
+- Objetivos Específicos: ${objetivosEspecificos || "(crie 3 a 5 objetivos)"}
+- Habilidades BNCC: ${habilidadesBncc || "(selecione as códigos mais adequados à série e tema)"}
+- Recursos Didáticos: ${recursos || "(sugira materiais)"}
+- Metodologia / Estratégias: ${metodologia || "(descreva o passo a passo)"}
+- Avaliação: ${avaliacao || "(sugira como avaliar)"}
+
+Estruture a resposta com Markdown, usando títulos (##), listas e negrito.
+Se algum campo acima estiver como "(não informado)", use sua expertise para preencher com o que faz mais sentido para o Tema e Ano.
 `.trim();
 
     try {
-        const resp = await openai.responses.create({
-            model: "gpt-4.1-mini",
-            input: [
+        const completion = await openai.chat.completions.create({
+            model: "gpt-4o-mini", // Correct model name
+            messages: [
                 { role: "system", content: system },
                 { role: "user", content: user },
             ],
+            temperature: 0.7,
         });
 
-        const text = extractTextFromResponse(resp);
+        const text = completion.choices[0]?.message?.content?.trim();
 
         if (!text) {
             return json(500, {
