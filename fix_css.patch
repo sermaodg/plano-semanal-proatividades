@@ -1,0 +1,24 @@
+--- styles.css
++++ styles.css
+@@ -957,11 +957,13 @@
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-color: var(--bg-white);
++    width: 100%;
+ }
+ 
+ .quiz-step {
+     opacity: 0;
+     transform: translateY(20px);
+     transition: all 0.5s ease-in-out;
++    width: 100%;
+ }
+@@ -1104,7 +1106,7 @@
+     html,
+     body {
+         overflow-x: hidden;
+-        width: 100vw;
++        width: 100%;
+         max-width: 100%;
+     }

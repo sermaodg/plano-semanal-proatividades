@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>ProAtividades - Materiais para Educação Infantil</title>
+    <meta name="description"
+        content="Tudo pronto para sua turma de Berçário e Maternal — sem precisar criar nada do zero. Planejamentos, histórias, atividades e muito mais.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Preloads for Fast Loading -->
+    <link rel="preload" href="styles.css" as="style">
+
+    <!-- UTMs -->
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids data-utmify-pixel-id="699d06a2edd415eed3f37a41" async defer></script>
+
+    <!-- Pixel UTMify -->
+    <script>
+        window.pixelId = "699d06a2edd415eed3f37a41";
+        var a = document.createElement("script");
+        a.async = true;
+        a.defer = true;
+        a.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+        document.head.appendChild(a);
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        function generateUUID() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+        window.pageViewID = generateUUID();
+
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '519348901226956');
+        fbq('track', 'PageView', {}, { eventID: window.pageViewID });
+
+        // Simulador de envio para CAPI (Server Action) do evento PageView
+        try {
+            fetch('/api/capi', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ event_name: 'PageView', event_id: window.pageViewID, url: window.location.href }),
+                keepalive: true
+            }).catch(() => { });
+        } catch (e) { }
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=519348901226956&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+    <main class="quiz-container">
+        <!-- ETAPA 1 - Gancho -->
+        <section id="step-1" class="quiz-step active scroll-reveal">
+            <div class="container text-center max-w-600 mx-auto step-content pt-4 pb-4">
+                <p class="microtext text-muted mb-2 font-bold"
+                    style="font-size: 0.85rem; letter-spacing: 0.5px; text-transform: uppercase;">NOVO MATERIAL LIBERADO
+                    PARA PROFESSORAS</p>
+                <h1 class="headline-primary mb-3" style="font-size: 1.8rem;">Profê, isso aqui está ajudando centenas de
+                    professoras a economizar horas toda semana</h1>
+                <p class="subheadline mb-4" style="font-size: 1.1rem;">Material completo para Berçário e Maternal já
+                    pronto para usar.</p>
+
+                <div class="mockup-wrapper floating mx-auto mb-4"
+                    style="max-width: 320px; box-shadow: none; background: transparent;">
+                    <img src="https://i.imgur.com/vLsgpPq.png" alt="Mockup ProAtividades" class="mockup-image"
+                        style="width: 100%; border-radius: 12px;">
+                </div>
+
+                <ul class="quiz-bullets text-left mx-auto mb-4" style="max-width: 350px; list-style: none; padding: 0;">
+                    <li class="mb-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                            style="vertical-align: middle; margin-right: 8px;">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> <b>Planejamentos prontos</b></li>
+                    <li class="mb-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                            style="vertical-align: middle; margin-right: 8px;">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> <b>Atividades prontas</b></li>
+                    <li class="mb-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                            style="vertical-align: middle; margin-right: 8px;">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> <b>Histórias, músicas e datas comemorativas</b></li>
+                    <li class="mb-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                            style="vertical-align: middle; margin-right: 8px;">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> <b>Tudo editável</b></li>
+                </ul>
+
+                <button class="btn-primary w-100 max-w-400 mx-auto" onclick="nextStep(2)">QUERO VER POR DENTRO</button>
+                <p class="microcopy mt-3">Leva menos de 1 minuto</p>
+            </div>
+        </section>
+
+        <!-- ETAPA 2 - Pergunta 1 -->
+        <section id="step-2" class="quiz-step" style="display: none;">
+            <div class="container text-center max-w-600 mx-auto step-content pt-5 pb-5 mt-5">
+                <h2 class="mb-5" style="font-size: 1.8rem;">Você trabalha com qual faixa etária?</h2>
+                <div class="quiz-options max-w-400 mx-auto">
+                    <button class="btn-outline w-100 mb-3 text-left pl-4"
+                        style="text-align: left; padding-left: 24px; font-size: 1.1rem;"
+                        onclick="nextStep(3, 'Berçário', 'faixa_etaria')">Berçário</button>
+                    <button class="btn-outline w-100 mb-3 text-left pl-4"
+                        style="text-align: left; padding-left: 24px; font-size: 1.1rem;"
+                        onclick="nextStep(3, 'Maternal', 'faixa_etaria')">Maternal</button>
+                    <button class="btn-outline w-100 mb-3 text-left pl-4"
+                        style="text-align: left; padding-left: 24px; font-size: 1.1rem;"
+                        onclick="nextStep(3, 'Ambos', 'faixa_etaria')">Ambos</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA 3 - Pergunta 2 -->
+        <section id="step-3" class="quiz-step" style="display: none;">
+            <div class="container text-center max-w-600 mx-auto step-content pt-5 pb-5 mt-5">
+                <h2 class="mb-5" style="font-size: 1.8rem;">Você cria seus planejamentos:</h2>
+                <div class="quiz-options max-w-400 mx-auto">
+                    <button class="btn-outline w-100 mb-3 text-left pl-4"
+                        style="text-align: left; padding-left: 24px; font-size: 1.1rem;"
+                        onclick="nextStep(4, 'Do zero', 'modo_criacao')">Do
+                        zero</button>
+                    <button class="btn-outline w-100 mb-3 text-left pl-4"
+                        style="text-align: left; padding-left: 24px; font-size: 1.1rem;"
+                        onclick="nextStep(4, 'Adapta da internet', 'modo_criacao')">Adapta da
+                        internet</button>
+                    <button class="btn-outline w-100 mb-3 text-left pl-4"
+                        style="text-align: left; padding-left: 24px; font-size: 1.1rem;"
+                        onclick="nextStep(4, 'Usa materiais prontos', 'modo_criacao')">Usa
+                        materiais prontos</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA 4 - Pergunta 3 -->
+        <section id="step-4" class="quiz-step" style="display: none;">
+            <div class="container text-center max-w-600 mx-auto step-content pt-5 pb-5 mt-5">
+                <h2 class="mb-5" style="font-size: 1.8rem;">Quanto tempo isso consome por semana?</h2>
+                <div class="quiz-options max-w-400 mx-auto">
+                    <button class="btn-outline w-100 mb-3 text-left pl-4"
+                        style="text-align: left; padding-left: 24px; font-size: 1.1rem;"
+                        onclick="nextStep(5, 'Menos de 1 hora', 'tempo_gasto')">Menos de
+                        1 hora</button>
+                    <button class="btn-outline w-100 mb-3 text-left pl-4"
+                        style="text-align: left; padding-left: 24px; font-size: 1.1rem;"
+                        onclick="nextStep(5, '1 a 3 horas', 'tempo_gasto')">1 a 3
+                        horas</button>
+                    <button class="btn-outline w-100 mb-3 text-left pl-4"
+                        style="text-align: left; padding-left: 24px; font-size: 1.1rem;"
+                        onclick="nextStep(5, '3 a 5 horas', 'tempo_gasto')">3 a 5
+                        horas</button>
+                    <button class="btn-outline w-100 mb-3 text-left pl-4"
+                        style="text-align: left; padding-left: 24px; font-size: 1.1rem;"
+                        onclick="nextStep(5, 'Mais de 5 horas', 'tempo_gasto')">Mais de 5
+                        horas</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA 5 - Transição -->
+        <section id="step-5" class="quiz-step" style="display: none;">
+            <div class="container text-center max-w-600 mx-auto step-content pt-4 pb-5">
+                <h2 class="mb-3" style="font-size: 1.8rem;">Veja como esse material funciona na prática:</h2>
+
+                <div class="video-wrapper vertical-video card-shadow mx-auto mt-4 mb-4" id="vturb-player"
+                    style="max-width: 360px;">
+                    <video id="promo-video" playsinline preload="auto" webkit-playsinline
+                        controlslist="nodownload noplaybackrate" crossorigin="anonymous" referrerpolicy="no-referrer"
+                        poster="imagens/Whisk_45317e6199a005285bc44c22aa573581dr.jpeg">
+                        <source src="https://i.imgur.com/YItYFv7.mp4" type="video/mp4" />
+                        Seu navegador não suporta vídeos.
+                    </video>
+
+                    <button class="play-overlay" id="play-overlay" type="button" aria-label="Reproduzir vídeo">
+                        <span class="play-btn" aria-hidden="true">▶</span>
+                    </button>
+
+                    <div class="progress-container" aria-hidden="true">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+
+                    <div class="video-fallback" id="video-fallback" style="display:none;">
+                        <p>Ops… seu vídeo não carregou.</p>
+                        <a class="btn-outline" href="https://i.imgur.com/YItYFv7.mp4" target="_blank" rel="noopener"
+                            style="padding: 10px 20px; font-size: 0.9rem;">Abrir vídeo</a>
+                    </div>
+                </div>
+
+                <div id="delay-container" style="display: none; opacity: 0; transition: opacity 0.5s ease-in;">
+                    <button class="btn-primary w-100 max-w-400 mx-auto text-lg mt-2 py-3" onclick="nextStep(6)"
+                        style="font-weight: 800;">QUERO VER MEU MATERIAL</button>
+                    <p class="microcopy mt-2 mb-0" style="color: #666; font-size: 0.9rem;">Seu tempo de acesso especial
+                        está rodando...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA 6 - OFERTA FINAL -->
+
+        <section id="step-6" class="quiz-step" style="display: none;">
+            <div class="bg-light pb-5">
+                <div class="container step-content pt-5">
+
+                    <!-- 1. RESULTADO DA ANÁLISE -->
+                    <div class="resultado-block text-left max-w-600 mx-auto card-shadow mb-5 bg-white"
+                        style="border-radius: 12px; padding: 24px; border-left: 5px solid var(--success);">
+                        <h3 class="mb-3" style="font-size: 1.4rem;">🎯 Resultado da sua análise</h3>
+                        <p class="mb-3" style="font-size: 1.05rem;">Com base nas suas respostas, esse material é
+                            <strong>altamente recomendado para você</strong>.
+                        </p>
+                        <p class="mb-2" style="font-size: 1.05rem;">Ele vai te ajudar principalmente em:</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 8px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--success)" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> economizar tempo no planejamento</li>
+                            <li style="margin-bottom: 8px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--success)" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> ter atividades prontas todos os dias</li>
+                            <li style="margin-bottom: 8px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--success)" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> organizar sua rotina com mais facilidade</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. EXEMPLOS (MOVED UP) -->
+                    <div class="section-header text-center mb-4">
+                        <h2 style="font-size: 2rem;">Veja alguns exemplos do que você vai receber agora:</h2>
+                    </div>
+
+                    <div class="mockup-wrapper mx-auto mb-4 floating"
+                        style="max-width: 250px; box-shadow: none; background: transparent;">
+                        <img src="https://i.imgur.com/vLsgpPq.png" alt="Mockup ProAtividades" class="mockup-image"
+                            style="width: 100%; border-radius: 12px;">
+                    </div>
+
+                    <div class="proofs-grid mb-5"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px;">
+                        <div class="proof-card card-shadow" style="border-radius: 12px; overflow: hidden;"><img
+                                src="https://i.imgur.com/yHqQC3F.png" alt="Print 1"
+                                style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <div class="proof-card card-shadow" style="border-radius: 12px; overflow: hidden;"><img
+                                src="https://i.imgur.com/Dyioh7Z.png" alt="Print 2"
+                                style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <div class="proof-card card-shadow" style="border-radius: 12px; overflow: hidden;"><img
+                                src="https://i.imgur.com/04Cde0b.png" alt="Print 3"
+                                style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <div class="proof-card card-shadow" style="border-radius: 12px; overflow: hidden;"><img
+                                src="https://i.imgur.com/S6hpq4X.png" alt="Print 4"
+                                style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <div class="proof-card card-shadow hide-mobile" style="border-radius: 12px; overflow: hidden;">
+                            <img src="https://i.imgur.com/fOjvNJv.png" alt="Print 5"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <div class="proof-card card-shadow hide-mobile" style="border-radius: 12px; overflow: hidden;">
+                            <img src="https://i.imgur.com/AfCFeG6.png" alt="Print 6"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                    </div>
+
+                    <!-- 3. OFERTA -->
+                    <div class="section-header mb-2 text-center pt-4" style="border-top: 1px solid #eee;">
+                        <h2 style="font-size: 2.2rem; color: var(--primary);">Seu acesso foi liberado</h2>
+                        <p class="microcopy mt-2" style="font-size: 1.1rem; color: #d9534f; font-weight: bold;">Acesso
+                            liberado hoje por valor promocional</p>
+                    </div>
+
+                    <!-- MICRO-PROVAS SOCIAIS -->
+                    <div class="text-center mb-4">
+                        <div style="color: #ffc107; font-size: 1.25rem; letter-spacing: 2px;">⭐⭐⭐⭐⭐</div>
+                        <p style="font-size: 0.95rem; font-weight: 500; margin-top: 8px;">Mais de 3.000 professoras já
+                            utilizam</p>
+                    </div>
+
+                    <div class="plans-grid max-w-800 mx-auto mb-5">
+                        <!-- Basic Plan -->
+                        <div class="plan-card card-shadow bg-white"
+                            style="padding: 32px 24px; display: flex; flex-direction: column;">
+                            <h3 class="plan-name" style="font-size: 1.25rem; font-weight: 700;">Plano Básico</h3>
+                            <div class="plan-price" style="font-size: 2.5rem; font-weight: 800;">R$ 19<span>,90</span>
+                            </div>
+                            <p class="plan-type" style="margin-bottom: 24px; color: var(--text-muted);">Pagamento único
+                            </p>
+
+                            <ul class="plan-features" style="flex: 1; margin-bottom: 32px;">
+                                <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px;"><svg
+                                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                        style="flex-shrink: 0;">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg> <span>Histórias infantis</span></li>
+                                <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px;"><svg
+                                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                        style="flex-shrink: 0;">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg> <span>Músicas infantis</span></li>
+
+                                <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">
+                                    <li
+                                        style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px; color: #999; text-decoration: line-through;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                            style="flex-shrink: 0;">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg> <span>Atividades lúdicas completas</span>
+                                    </li>
+                                    <li
+                                        style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px; color: #999; text-decoration: line-through;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                            style="flex-shrink: 0;">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg> <span>Datas comemorativas completas</span>
+                                    </li>
+                                    <li
+                                        style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px; color: #999; text-decoration: line-through;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                            style="flex-shrink: 0;">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg> <span>Pacotão 3 em 1 (cartazes, moldes e lembrancinhas)</span>
+                                    </li>
+                                    <li
+                                        style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px; color: #999; text-decoration: line-through;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                            style="flex-shrink: 0;">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg> <span>Gerador de planejamento com IA</span>
+                                    </li>
+                                    <li
+                                        style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px; color: #999; text-decoration: line-through;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                            style="flex-shrink: 0;">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg> <span>Materiais premium exclusivos</span>
+                                    </li>
+                                    <li
+                                        style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px; color: #999; text-decoration: line-through;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                            style="flex-shrink: 0;">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg> <span>Atualizações futuras</span>
+                                    </li>
+                                    <li
+                                        style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px; color: #999; text-decoration: line-through;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                            style="flex-shrink: 0;">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg> <span>Economize até 5 horas por semana</span>
+                                    </li>
+                                </div>
+                            </ul>
+
+                            <a href="https://checkout.navenaut.com/D85G4" class="btn-outline w-100 mt-auto"
+                                style="border-radius: 12px; padding: 14px; font-weight: bold; font-size: 1rem;"
+                                onclick="fireUtmifyAndRedirect(this.href, event, 'Plano Basico')"
+                                data-utmify="checkout">ESCOLHER PLANO BÁSICO</a>
+                            <p
+                                style="text-align: center; font-size: 0.85rem; color: #aaa; margin-top: 12px; margin-bottom: 0px;">
+                                Acesso limitado</p>
+                        </div>
+
+                        <!-- Complete Plan -->
+                        <div class="plan-card featured card-shadow bg-white"
+                            style="border: 3px solid var(--primary); padding: 32px 24px; position: relative; transform: scale(1.02); display: flex; flex-direction: column;">
+                            <div class="featured-badge"
+                                style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 4px 16px; border-radius: 20px; font-weight: 700; font-size: 0.8rem; text-align: center; width: max-content; max-width: 90%;">
+                                MAIS ESCOLHIDO PELAS PROFESSORAS</div>
+                            <h3 class="plan-name" style="font-size: 1.25rem; font-weight: 700;">Plano Completo</h3>
+                            <div class="plan-price" style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">
+                                R$ 29<span>,90</span></div>
+                            <p class="plan-type" style="margin-bottom: 8px; color: var(--text-muted);">Pagamento único
+                            </p>
+                            <p
+                                style="color: var(--success); font-weight: 700; font-size: 0.95rem; margin-bottom: 16px;">
+                                Melhor custo-benefício</p>
+
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px;">
+                                <span
+                                    style="background: rgba(40,167,69,0.1); color: var(--success); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">✔
+                                    acesso imediato</span>
+                                <span
+                                    style="background: rgba(40,167,69,0.1); color: var(--success); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">✔
+                                    acesso completo</span>
+                                <span
+                                    style="background: rgba(40,167,69,0.1); color: var(--success); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">✔
+                                    sem mensalidade</span>
+                            </div>
+
+                            <ul class="plan-features" style="flex: 1; margin-bottom: 16px;">
+                                <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px;"><svg
+                                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                        style="flex-shrink: 0;">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg> <span>Histórias infantis</span></li>
+                                <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px;"><svg
+                                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                        style="flex-shrink: 0;">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg> <span>Músicas infantis</span></li>
+                                <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px;"><svg
+                                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                        style="flex-shrink: 0;">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg> <span>Atividades lúdicas completas</span></li>
+                                <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px;"><svg
+                                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                        style="flex-shrink: 0;">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg> <span>Datas comemorativas completas</span></li>
+                                <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px;"><svg
+                                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                        style="flex-shrink: 0;">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg> <span>Pacotão 3 em 1 (cartazes, moldes e lembrancinhas)</span></li>
+                                <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px;"><svg
+                                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                        style="flex-shrink: 0;">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg> <span>Gerador de planejamento com IA</span></li>
+                                <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px;"><svg
+                                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                        style="flex-shrink: 0;">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg> <span>Materiais premium exclusivos</span></li>
+                                <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px;"><svg
+                                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                        style="flex-shrink: 0;">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg> <span>Atualizações incluídas</span></li>
+
+                                <li
+                                    style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px; color: var(--primary); font-weight: 600; margin-top: 10px;">
+                                    ⭐ <span>Economize até 5 horas do seu trabalho toda semana</span></li>
+                                <li
+                                    style="margin-bottom: 12px; display: flex; align-items: start; gap: 8px; color: var(--primary); font-weight: 600;">
+                                    ⭐ <span>Tenha tudo pronto o ano inteiro</span></li>
+                            </ul>
+
+                            <p
+                                style="text-align: center; font-size: 0.95rem; font-weight: 700; color: #8e44ad; margin-bottom: 24px; margin-top: auto;">
+                                Ideal para professoras que querem tudo pronto</p>
+
+                            <a href="https://checkout.navenaut.com/9hxvj" class="btn-primary w-100 mt-0"
+                                style="border-radius: 12px; padding: 14px; font-weight: bold; font-size: 1.05rem;"
+                                onclick="fireUtmifyAndRedirect(this.href, event, 'Plano Completo')"
+                                data-utmify="checkout">QUERO O PLANO COMPLETO</a>
+                            <p
+                                style="text-align: center; font-size: 0.85rem; color: #666; margin-top: 12px; margin-bottom: 0px;">
+                                Acesso completo e imediato</p>
+                        </div>
+                    </div>
+
+                    <!-- Trust text -->
+                    <div class="trust-text mb-5 text-center">
+                        <p style="font-weight: 500; margin-bottom: 8px;">🔒 Compra 100% Segura. Acesso liberado
+                            imediatamente após o pagamento.</p>
+                        <a href="https://www.instagram.com/proc.aroloficial?igsh=cGcyYWtjMzZicHhw&utm_source=qr"
+                            target="_blank" rel="noopener" class="btn-instagram-discreet mx-auto"
+                            style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid #ccc; padding: 6px 16px; border-radius: 20px; text-decoration: none; color: #333; font-weight: 500;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            Siga-nos no Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. FAQ Section -->
+                <div class="container pt-3">
+                    <div class="section-header text-center mb-4 pt-4" style="border-top: 1px solid #eee;">
+                        <h2>Dúvidas Frequentes</h2>
+                    </div>
+
+                    <div class="faq-accordion mx-auto mb-5"
+                        style="max-width: 700px; display: flex; flex-direction: column; gap: 12px;">
+                        <div class="faq-item card-shadow bg-white" style="border-radius: 12px; overflow: hidden;">
+                            <button class="faq-question w-100"
+                                style="display: flex; justify-content: space-between; align-items: center; padding: 20px; font-weight: 600; font-size: 1.05rem; background: none; border: none; text-align: left; cursor: pointer;">
+                                Como recebo o acesso?
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div class="faq-answer"
+                                style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                                <p style="padding: 0 20px 20px; color: var(--text-main);">Após a confirmação do
+                                    pagamento, você receberá um e-mail com as instruções e o link para acessar a
+                                    plataforma imediatamente.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item card-shadow bg-white" style="border-radius: 12px; overflow: hidden;">
+                            <button class="faq-question w-100"
+                                style="display: flex; justify-content: space-between; align-items: center; padding: 20px; font-weight: 600; font-size: 1.05rem; background: none; border: none; text-align: left; cursor: pointer;">
+                                Funciona no celular?
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div class="faq-answer"
+                                style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                                <p style="padding: 0 20px 20px; color: var(--text-main);">Sim, 100%! A plataforma foi
+                                    projetada para funcionar perfeitamente em smartphones, tablets e computadores.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item card-shadow bg-white" style="border-radius: 12px; overflow: hidden;">
+                            <button class="faq-question w-100"
+                                style="display: flex; justify-content: space-between; align-items: center; padding: 20px; font-weight: 600; font-size: 1.05rem; background: none; border: none; text-align: left; cursor: pointer;">
+                                É para quais idades?
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div class="faq-answer"
+                                style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                                <p style="padding: 0 20px 20px; color: var(--text-main);">O material é focado no
+                                    Berçário e Maternal, abrangendo crianças de 0 a 3 anos (até quase 4 anos).</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item card-shadow bg-white" style="border-radius: 12px; overflow: hidden;">
+                            <button class="faq-question w-100"
+                                style="display: flex; justify-content: space-between; align-items: center; padding: 20px; font-weight: 600; font-size: 1.05rem; background: none; border: none; text-align: left; cursor: pointer;">
+                                Tem datas comemorativas?
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div class="faq-answer"
+                                style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                                <p style="padding: 0 20px 20px; color: var(--text-main);">Sim! O Plano Completo dá
+                                    acesso exclusivo a todos os projetos e atividades focadas nas principais datas
+                                    comemorativas do ano.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item card-shadow bg-white" style="border-radius: 12px; overflow: hidden;">
+                            <button class="faq-question w-100"
+                                style="display: flex; justify-content: space-between; align-items: center; padding: 20px; font-weight: 600; font-size: 1.05rem; background: none; border: none; text-align: left; cursor: pointer;">
+                                Posso imprimir?
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div class="faq-answer"
+                                style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                                <p style="padding: 0 20px 20px; color: var(--text-main);">Com certeza. Os planejamentos,
+                                    cartazes e moldes possuem arquivos em PDF otimizados para você baixar e imprimir na
+                                    hora.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item card-shadow bg-white" style="border-radius: 12px; overflow: hidden;">
+                            <button class="faq-question w-100"
+                                style="display: flex; justify-content: space-between; align-items: center; padding: 20px; font-weight: 600; font-size: 1.05rem; background: none; border: none; text-align: left; cursor: pointer;">
+                                E se eu tiver dúvidas?
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div class="faq-answer"
+                                style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                                <p style="padding: 0 20px 20px; color: var(--text-main);">Temos uma equipe de suporte
+                                    por WhatsApp e Telegram sempre pronta para te ajudar a acessar e utilizar seus
+                                    materiais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">ProAtividades • Materiais para Educação Infantil</div>
+            <p class="footer-disclaimer">Este é um produto digital. Conteúdos e organização podem receber atualizações
+                para melhor atender às suas necessidades.</p>
+            <div class="footer-links">
+                <a href="#">Políticas de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts (deferred for Fast Loading) -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>

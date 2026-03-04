@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "arfcil-app-08985535-8bc4b"
-  }
+    "default": "proatividades-cce22",
+    "criador de roteiros bncc": "proatividades-cce22",
+    "firebase logout": "studio-5558100286-8bbab"
+  },
+  "targets": {},
+  "etags": {}
 }
