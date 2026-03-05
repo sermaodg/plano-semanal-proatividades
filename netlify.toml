@@ -1,6 +1,5 @@
 [build]
-  command = "TS_NODE_PROJECT=tsconfig.netlify.json npm run build"
-  publish = "out"
+  publish = "public"
 
 [functions]
   directory = "netlify/functions"

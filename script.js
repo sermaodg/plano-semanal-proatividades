@@ -374,19 +374,29 @@ function nextStep(stepNumber, answerLabel, questionKey) {
             sendLeadData();
         }
 
-        // VSL Logic: VTurb delay on step 5
-        if (stepNumber === 5) {
-            // Exibe o botão após 60 segundos (60000 ms)
-            setTimeout(() => {
-                const delayContainer = document.getElementById('delay-container');
-                if (delayContainer) {
-                    delayContainer.style.display = 'block';
-                    // Efeito de fade-in
+        // VSL Logic: CTA delay on step 6
+        if (stepNumber === 6) {
+            const vslCta = document.getElementById('vsl-cta-container');
+            if (vslCta) {
+                const showCta = () => {
+                    vslCta.style.display = 'block';
                     setTimeout(() => {
-                        delayContainer.style.opacity = '1';
+                        vslCta.style.opacity = '1';
                     }, 50);
+                };
+
+                // Show after 65 seconds
+                const delayTimer = setTimeout(showCta, 65000);
+
+                // Or when video ends (if it ends earlier)
+                const videoEl = document.getElementById('promo-video');
+                if (videoEl) {
+                    videoEl.addEventListener('ended', () => {
+                        clearTimeout(delayTimer);
+                        showCta();
+                    }, { once: true });
                 }
-            }, 60000); // 60s
+            }
         }
     }
 }
